@@ -1,0 +1,9 @@
+application:
+  name: "Test App"
+  port: 8081
+
+server:
+  cors: true
+
+logger:
+  enable_cloudwatch: true
