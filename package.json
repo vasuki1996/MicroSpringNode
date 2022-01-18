@@ -1,6 +1,6 @@
 {
   "name": "microspringnode",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "framework for microservices",
   "main": "index",
   "typings": "index",
