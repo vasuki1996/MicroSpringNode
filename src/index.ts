@@ -9,7 +9,7 @@ export const appConfigs: ConfigurationsInterface = getConfigs(require(path.join(
 import { ResponseEntity } from './models/ResponseEntity';
 import { getRoutes, postRoutes, putRoutes, patchRoutes, deleteRoutes, ControllerMap, getRoutesDocs, patchRoutesDocs, postRoutesDocs, putRoutesDocs, deleteRoutesDocs } from './decorators/RequestMapping';
 import { Log } from './components/logger'; 
-import { initializeLogger } from './components/logger/cloudwatch';
+import { initializeLogger as initializeCloudwatchLogger } from './components/logger/cloudwatch';
 import { docu_gen } from "./components/swagger/services/generator";
 import * as swaggerUi from "swagger-ui-express";
 
@@ -47,7 +47,9 @@ const respond  = (result: any, res: express.Response) => {
 const start = () => {
     console.log("PATH => ", path.join(contextRoot, "resources","application.yml"));
     console.log("ControllerMap", ControllerMap);
-    initializeLogger();
+    if(appConfigs.logger && appConfigs.logger.enable_cloudwatch){
+        initializeCloudwatchLogger();
+    }
     console.log("Configuration", appConfigs);
     const openapi_doc = docu_gen(appConfigs, getRoutesDocs, postRoutesDocs, putRoutesDocs, patchRoutesDocs, deleteRoutesDocs);
     if(appConfigs.cors){
