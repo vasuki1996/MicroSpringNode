@@ -1,4 +1,4 @@
-import { start } from "framework/index";
+import { start } from "microspringnode/index";
 import { TestController, ShareController } from './controllers';
 
 new TestController();

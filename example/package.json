@@ -13,13 +13,7 @@
   "author": "Vasuki Vardhan G",
   "license": "ISC",
   "dependencies": {
-    "body-parser": "^1.19.0",
-    "cors": "^2.8.5",
-    "express": "^4.17.1",
-    "framework": "file:../dist",
-    "js-yaml": "^3.13.1",
-    "log4js": "^6.2.1",
-    "sqlite3": "^5.0.2"
+    "microspringnode": "^0.0.4"
   },
   "devDependencies": {
     "ts-node": "^10.2.1",
