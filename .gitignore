@@ -106,3 +106,6 @@ lib
 
 # Sqlite 3
 *.db
+
+#IDE Config
+.idea/

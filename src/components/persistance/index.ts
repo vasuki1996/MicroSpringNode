@@ -1,3 +1,3 @@
-import { getDefaultDatabase } from './sqlite';
+import { getDefaultDatabase, getRepository as getRepositoryForDefaultDatabase } from './sqlite';
 
-export { getDefaultDatabase }
+export { getDefaultDatabase, getRepositoryForDefaultDatabase }

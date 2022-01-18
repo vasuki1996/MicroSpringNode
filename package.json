@@ -22,7 +22,9 @@
     "log4js-cloudwatch-appender": "^1.1.0",
     "node-addon-api": "^3.0.0",
     "object.getownpropertydescriptors": "^2.1.0",
-    "typeorm": "^0.2.37"
+    "swagger-ui-express": "^4.3.0",
+    "typeorm": "^0.2.37",
+    "typescript-json-schema": "^0.53.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.8.4",
@@ -35,6 +37,7 @@
     "@types/cors": "^2.8.6",
     "@types/express": "^4.17.6",
     "@types/js-yaml": "^4.0.3",
-    "@types/node": "^13.13.4"
+    "@types/node": "^13.13.4",
+    "@types/swagger-ui-express": "^4.1.3"
   }
 }

@@ -1,6 +1,7 @@
-import { getDefaultDatabase } from 'framework/components/persistance';
+import { getRepositoryForDefaultDatabase } from "framework/components/persistance";
+import {EntityTarget, Repository} from "typeorm";
 
-export const getDatabseConnection = async () => {
-    const connection = await getDefaultDatabase();
-    return connection;
+export const getRepository = async (entity: EntityTarget<any>): Promise<Repository<any>> => {
+    const repository: Repository<any> = await getRepositoryForDefaultDatabase(entity);
+    return repository;
 }

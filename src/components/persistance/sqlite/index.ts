@@ -1,10 +1,10 @@
 import path from "path";
-import { createConnection } from "typeorm";
+import {BaseEntity, Connection, createConnection, EntityTarget, Repository} from "typeorm";
 import { contextRoot } from "../../..";
 
-export const getDefaultDatabase = async () => {
+export const getDefaultDatabase = async (): Promise<Connection> => {
     const isCompiled = path.extname(__filename).includes('js');
-    const connection = await createConnection({
+    const connection: Connection = await createConnection({
         name: "default",
         type: "sqlite",
         database: path.join(contextRoot, "database.db"),
@@ -19,3 +19,11 @@ export const getDefaultDatabase = async () => {
     });
     return connection;
 }
+
+export const getRepository = async (entity: EntityTarget<any>): Promise<Repository<any>> => {
+    const connection = await getDefaultDatabase();
+    const repository: Repository<any> = connection.getRepository(entity);
+    return repository;
+}
+
+
