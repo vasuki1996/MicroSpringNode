@@ -1,0 +1,63 @@
+server:
+  port: 8080
+  cors: false
+  ssl: false
+  key-store: 
+    cert: ${contextRoot}/cert
+    priv-key: ${contextRoot}/privKey
+
+application:
+  name: Generic Name
+
+
+database:
+  mongodb:
+    username: username
+    password: password #use enc(encryptedPassword) for encrypted passwords
+    host: localhost
+    database-name: somename
+
+logger:
+  level: INFO #default logging level for the console appender
+  rolling_file:
+    path: /path/to/output
+    limits:
+      size: 10M
+      time: 24H
+  enable_kafka: false
+  kafka:
+    host: localhost
+    port: 2181
+    topic: logger
+    level: INFO
+  enable_fluent: false
+  fluent:
+    host: localhost
+    port: 24224
+    timeout: 3.0
+    reconnectInterval: 600000
+    security:
+      clientHostName: localhost
+      sharedKey: ${contextRoot)/shared-key
+      username: username
+      password: password
+    sendQueueSizeLimit: 8M
+    tls: false
+    tls-options:
+      ca: ${contextRoot)/ca-cert
+      cert: ${contextRoot)/client-cert
+      key: ${contextRoot)/client-key
+      passphrase: passphrase
+  enable_cloudwatch: false
+  cloudwatch:
+    accessKeyId: '<accessKeyId>'
+    secretAccessKey: '<secretAccessKey>'
+    region: 'eu-central-1'
+    logGroup: 'prod'
+    logStream: 'apps'
+    layout: '<custom layout object>'
+    lawgsConfig: '<optional alwgs config object>'
+
+
+  
+    
