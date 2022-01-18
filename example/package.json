@@ -13,7 +13,7 @@
   "author": "Vasuki Vardhan G",
   "license": "ISC",
   "dependencies": {
-    "microspringnode": "^0.0.4"
+    "microspringnode": "^0.0.7"
   },
   "devDependencies": {
     "ts-node": "^10.2.1",
