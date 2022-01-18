@@ -1,10 +1,10 @@
-import { RequestMapping } from "framework/decorators/RequestMapping";
-import { Controller } from "framework/decorators/Controller";
-import { HttpMethod } from "framework/constants/HttpMethods";
-import { Log } from "framework/index";
+import { RequestMapping } from "microspringnode/decorators/RequestMapping";
+import { Controller } from "microspringnode/decorators/Controller";
+import { HttpMethod } from "microspringnode/constants/HttpMethods";
+import { Log } from "microspringnode/index";
 import { createShare, getAllShares} from "../services"
-import { MimeType } from "framework/constants/MimeTypes";
-import { HttpStatusCode } from "framework/constants/HttpStatus";
+import { MimeType } from "microspringnode/constants/MimeTypes";
+import { HttpStatusCode } from "microspringnode/constants/HttpStatus";
 
 @Controller()
 export class ShareController{
