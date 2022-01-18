@@ -1,5 +1,5 @@
 {
-  "name": "framework",
+  "name": "microspringnode",
   "version": "0.0.1",
   "description": "framework for microservices",
   "main": "dist/index.js",
