@@ -201,11 +201,11 @@ export const generateSchemas = () => {
 
     const schemaWithReusedGenerator = generator.getSchemaForSymbols(generator.getMainFileSymbols(program));
 
-    if(existsSync(join(contextRoot, "resources", "schema"))){
-        mkdirSync(join(contextRoot, "resources", "schema"), { recursive: true })
-    }
+    // if(existsSync(join(contextRoot, "resources", "schema"))){
+    //     mkdirSync(join(contextRoot, "resources", "schema"), { recursive: true })
+    // }
 
-    writeFileSync(join(contextRoot, "resources", "schema", "schema.json"), JSON.stringify(schemaWithReusedGenerator, null, 2));
+    // writeFileSync(join(contextRoot, "resources", "schema", "schema.json"), JSON.stringify(schemaWithReusedGenerator, null, 2));
 
     return schemaWithReusedGenerator;
 }
